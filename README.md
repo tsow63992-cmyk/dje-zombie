@@ -1,5 +1,7 @@
 # Dje_zombie — Saison 1
 
+**▶ Jouer : https://tsow63992-cmyk.github.io/dje-zombie/**
+
 Jeu narratif dans le navigateur, en français, au format vertical (téléphone d'abord, PC aussi).
 Fais tourner la roulette, découvre quel zombie te chasse, et tiens trois nuits en trouvant son point faible.
 
