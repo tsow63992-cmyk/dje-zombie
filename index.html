@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#04070d">
+  <meta name="description" content="Dje_zombie — Saison 1. Fais tourner la roulette, découvre qui te chasse, et tiens trois nuits.">
+  <title>Dje_zombie — Saison 1</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2305080f'/%3E%3Ccircle cx='32' cy='26' r='13' fill='%238ea397'/%3E%3Ccircle cx='27' cy='25' r='3' fill='%2305080f'/%3E%3Ccircle cx='37' cy='25' r='3' fill='%2305080f'/%3E%3Crect x='22' y='40' width='20' height='16' rx='4' fill='%232ef2e0'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <main id="stage">
+      <div id="monde" aria-hidden="true"></div>
+      <canvas id="fx" aria-hidden="true"></canvas>
+      <div id="voile" aria-hidden="true"><div class="faisceau"></div></div>
+
+      <header id="hud" hidden>
+        <div class="hud-ligne">
+          <span id="hud-nuit" class="pastille">NUIT 1/3</span>
+          <span id="hud-zombie" class="hud-zombie"></span>
+        </div>
+        <div class="hud-jauges">
+          <div class="jauge" id="j-bruit"><span class="j-nom">BRUIT</span><span class="j-barre"><i></i></span></div>
+          <div class="jauge" id="j-peur"><span class="j-nom">PEUR</span><span class="j-barre"><i></i></span></div>
+          <div class="jauge visi" id="j-visi"><span class="j-nom">NOIR</span><span class="j-oeil"></span></div>
+        </div>
+        <div id="hud-sac" class="hud-sac" aria-label="Ton sac"></div>
+      </header>
+
+      <div id="carte-nuit" aria-live="assertive"></div>
+      <div id="ecran"></div>
+      <div id="message" hidden></div>
+      <div id="bas">
+        <div id="soustitres" aria-live="polite"></div>
+        <div id="choix" role="group" aria-label="Tes choix"></div>
+      </div>
+      <div id="toast" aria-live="polite"></div>
+
+      <nav id="barre" aria-label="Réglages">
+        <button id="b-son" class="rond" type="button" aria-label="Couper le son" title="Son (M)"></button>
+        <button id="b-voix" class="rond" type="button" aria-label="Activer la voix" title="Voix (V)"></button>
+        <button id="b-menu" class="rond" type="button" aria-label="Menu" title="Menu (Échap)"></button>
+      </nav>
+      <div id="flash" aria-hidden="true"></div>
+    </main>
+  </div>
+  <noscript><p class="noscript">Dje_zombie a besoin de JavaScript pour fonctionner.</p></noscript>
+
+  <!-- Moteur -->
+  <script src="js/core.js"></script>
+  <!-- Données de la saison -->
+  <script src="data/zombies.js"></script>
+  <script src="data/lieux.js"></script>
+  <script src="data/portraits.js"></script>
+  <script src="data/decors.js"></script>
+  <script src="data/scenes/rouille.js"></script>
+  <script src="data/scenes/ecouteur.js"></script>
+  <script src="data/scenes/vitreux.js"></script>
+  <script src="data/scenes/rampeur.js"></script>
+  <script src="data/scenes/geant.js"></script>
+  <script src="data/scenes/siffleur.js"></script>
+  <script src="data/scenes/braise.js"></script>
+  <script src="data/scenes/brume.js"></script>
+  <script src="data/scenes/sansyeux.js"></script>
+  <!-- Interface -->
+  <script src="js/util.js"></script>
+  <script src="js/save.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/voix.js"></script>
+  <script src="js/soustitres.js"></script>
+  <script src="js/effets.js"></script>
+  <script src="js/rendu.js"></script>
+  <script src="js/science.js"></script>
+  <script src="js/roulette.js"></script>
+  <script src="js/fiche.js"></script>
+  <script src="js/partage.js"></script>
+  <script src="js/jeu.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
